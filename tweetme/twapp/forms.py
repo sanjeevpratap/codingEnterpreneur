@@ -1,10 +1,13 @@
 from unittest.util import _MAX_LENGTH
 from django import forms
-from django import forms
+
 
 from .models import Tweet
 
-MAX_TWEET_LENGTH= 240
+from django.conf import settings
+
+
+MAX_TWEET_LENGTH= settings.MAX_TWEET_LENGTH
 class TweetForm(forms.ModelForm):
     # content= forms.CharField()
     class Meta:
